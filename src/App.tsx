@@ -131,13 +131,31 @@ export default function App() {
             adventures and joy.
           </motion.p>
           <motion.div
-            className="mt-10 sm:mt-16 text-xl text-sky-100"
+            className="mt-10 sm:mt-12 text-xl text-sky-100 space-y-6"
             variants={itemVariants}
           >
-            <p id="closing">Lots of love,</p>
-            <p id="signature" className="font-script text-6xl text-yellow-300 -ml-2">
-              Tim x
-            </p>
+            {!started && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  if (audioRef.current) {
+                    audioRef.current.play().catch(() => { });
+                    setStarted(true);
+                  }
+                }}
+                className="px-8 py-3 bg-gradient-to-r from-yellow-400 to-pink-500 rounded-full font-bold text-white shadow-xl hover:shadow-2xl transition-all flex items-center gap-2 mx-auto md:mx-0"
+              >
+                <span>🎵</span> Play Birthday Song
+              </motion.button>
+            )}
+
+            <div>
+              <p id="closing">Lots of love,</p>
+              <p id="signature" className="font-script text-6xl text-yellow-300 -ml-2">
+                Tim x
+              </p>
+            </div>
           </motion.div>
         </motion.div>
 
