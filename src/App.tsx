@@ -141,48 +141,48 @@ export default function App() {
           </motion.div>
         </motion.div>
 
-        {/* Image collage section — 2-col grid, 5th spans full width */}
-        <div className="w-full md:w-1/2 p-3 grid grid-cols-2 gap-2 content-center">
+        {/* Image collage section — Tighter 3+2 grid to ensure all are visible */}
+        <div className="w-full md:w-1/2 p-2 grid grid-cols-6 gap-2 content-center items-center">
+          {/* Row 1: 3 images */}
           <motion.img
-            id="main-image"
             src={photo1}
             alt="Dad and child"
-            className="w-full aspect-[3/4] rounded-xl object-cover shadow-xl border-4 border-white"
-            style={{ rotate: '-3deg' }}
+            className="col-span-2 w-full aspect-[3/4] rounded-lg object-cover shadow-lg border-2 border-white"
+            style={{ rotate: '-2deg' }}
             variants={imageMainVariant}
           />
           <motion.img
-            id="image-3"
             src={photo2}
-            alt="Dad throwing child in the air at the beach"
-            className="w-full aspect-[3/4] rounded-xl object-cover shadow-xl border-4 border-white"
-            style={{ rotate: '3deg' }}
+            alt="Dad throwing child"
+            className="col-span-2 w-full aspect-[3/4] rounded-lg object-cover shadow-lg border-2 border-white"
+            style={{ rotate: '1deg' }}
             variants={imageSideVariant1}
           />
           <motion.img
-            id="image-2"
             src={photo3}
-            alt="Mum lifting child on the beach"
-            className="w-full aspect-[3/4] rounded-xl object-cover shadow-xl border-4 border-white"
-            style={{ rotate: '2deg' }}
+            alt="Mum lifting child silhouette"
+            className="col-span-2 w-full aspect-[3/4] rounded-lg object-cover shadow-lg border-2 border-white"
+            style={{ rotate: '-1deg' }}
             variants={imageSideVariant2}
           />
+
+          {/* Row 2: 2 images centered */}
+          <div className="col-span-1"></div> {/* Spacer */}
           <motion.img
-            id="image-4"
             src={photo4}
             alt="Family group photo"
-            className="w-full aspect-[3/4] rounded-xl object-cover shadow-xl border-4 border-white"
-            style={{ rotate: '-2deg' }}
+            className="col-span-2 w-full aspect-[3/4] rounded-lg object-cover shadow-lg border-2 border-white"
+            style={{ rotate: '2deg' }}
             variants={imageSideVariant1}
           />
           <motion.img
-            id="image-5"
             src={photo5}
-            alt="Three friends at a wedding"
-            className="col-span-2 w-full aspect-[16/7] rounded-xl object-cover shadow-xl border-4 border-white"
-            style={{ rotate: '-1deg' }}
+            alt="Wedding group photo"
+            className="col-span-2 w-full aspect-[3/4] rounded-lg object-cover shadow-lg border-2 border-white"
+            style={{ rotate: '-2deg' }}
             variants={imageMainVariant}
           />
+          <div className="col-span-1"></div> {/* Spacer */}
         </div>
       </motion.div>
     </main>
