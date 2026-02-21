@@ -10,7 +10,7 @@ import photo2 from './assets/photo2.png';
 import photo3 from './assets/photo3.png';
 import photo4 from './assets/photo4.jpg';
 import photo5 from './assets/photo5.jpg';
-import music from './assets/Echoes_of_Yesterday.mp3';
+import music from './assets/Birthday_Echoes.mp3';
 
 const containerVariants = {
   hidden: { opacity: 0 },
