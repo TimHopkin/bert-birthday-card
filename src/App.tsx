@@ -29,7 +29,13 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-const photos = [photo1, photo2, photo3, photo4, photo5];
+const photos = [
+  { src: photo1, position: 'center' },
+  { src: photo2, position: 'top' },    // Child in the air
+  { src: photo3, position: 'top' },    // Child in the air
+  { src: photo4, position: 'center' },
+  { src: photo5, position: 'center' },
+];
 
 const carouselVariants = {
   enter: (direction: number) => ({
@@ -305,9 +311,10 @@ export default function App() {
                     className="absolute w-full h-full p-4"
                   >
                     <img
-                      src={photos[photoIndex]}
+                      src={photos[photoIndex].src}
                       alt={`Memory ${photoIndex + 1}`}
                       className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white pointer-events-none"
+                      style={{ objectPosition: photos[photoIndex].position }}
                     />
                   </motion.div>
                 </AnimatePresence>
