@@ -7,10 +7,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Sun } from 'lucide-react';
 import Confetti from './components/Confetti';
 import photo1 from './assets/photo1.png';
-import photo2 from './assets/photo2.png';
-import photo3 from './assets/photo3.png';
+import photo3 from './assets/photo3_v3.png';
 import photo4 from './assets/photo4.jpg';
 import photo5 from './assets/photo5.jpg';
+import photo6 from './assets/photo6.png';
 import music from './assets/Birthday_Echoes.mp3';
 
 const containerVariants = {
@@ -31,10 +31,10 @@ const itemVariants = {
 
 const photos = [
   { src: photo1, position: 'center' },
-  { src: photo2, position: 'top' },    // Child in the air
-  { src: photo3, position: 'top' },    // Child in the air
+  { src: photo3, position: 'top' },    // Child in pink lifting
   { src: photo4, position: 'center' },
   { src: photo5, position: 'center' },
+  { src: photo6, position: 'top' },    // High-throw photo
 ];
 
 const carouselVariants = {
